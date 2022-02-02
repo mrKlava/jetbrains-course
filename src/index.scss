@@ -1,7 +1,8 @@
 @use './style/variables' as *;
 
 body {
-    background-color: $bg-body-color;
+    color: $color-text-dark;
+    background-color: $bg-body;
     margin: 0 auto;
     font-size: 16px;
     font-family: $font-regular;
@@ -26,6 +27,8 @@ p {
 }
 
 .container {
+    position: relative;
+
     width: 1200px;
 
     margin: 0 auto;

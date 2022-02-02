@@ -1,0 +1,48 @@
+@use '../../style/variables' as *;
+
+.navbar {
+    position: fixed;
+
+    height: 3rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: $bg-nav;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        &-link {
+            text-decoration: none;
+            color: $color-navlink
+        }
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+        display: flex;
+
+        &-item {
+            margin-right: 3rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            &-link {
+                text-decoration: none;
+                color: $color-navlink;
+
+                transition: color .2s linear;
+
+                &:hover {
+                    color: $color-navlink-hover;
+                }
+            }
+        }
+    }
+}

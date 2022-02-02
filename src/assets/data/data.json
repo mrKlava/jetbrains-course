@@ -1,0 +1,33 @@
+{
+    "header": {
+        "suptitle": "Have passed this training",
+        "title": "Track: Frontend Developer",
+        "line": [
+            "41k already learning",
+            "6 projects",
+            "80 hours",
+            "154 topics"
+        ],
+        "text": "Do you want to create your own websites or web applications? Choose this track to learn the most popular development tool suite among programmers around the world. We will cover the basics of JavaScript, HTML, and CSS to discover the power of modern Frontend development.",
+        "btn": {
+            "big": "Alredy done",
+            "small": "click to see the result"
+        }
+    },
+    "about": {
+        "title": "Project-based learning with personal recommendations",
+        "subtitle": "Learn programming while building complete applications",
+        "text": "Learn with structured textual content. Apply your skills and create projects for your portfolio.",
+        "image": "",
+        "card": {
+            "text": "Your learning is driven by a practical goal set by the project. This way you can see how tool and concepts are applied in the real life.",
+            "bold": "Benefit from our recommendations that adjust to your level or choose a project out of 6 projects of varying complexity.",
+            "list": [
+                "Easy projects if you're just starting.",
+                "Medium projects to build upon the basics.",
+                "Hard projects to practice all the basic concepts and learn new ones.",
+                "Challenging projects to perfect your knowledge with challenging tasks."
+            ]
+        }
+    }
+}
