@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'PT Root UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../assets/fonts/pt-root-ui/PT\ Root\ UI_Regular.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'PT Root UI Light';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../assets/fonts/pt-root-ui/PT\ Root\ UI_Light.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'PT Root UI Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../assets/fonts/pt-root-ui/PT\ Root\ UI_Medium.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'PT Root UI Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../assets/fonts/pt-root-ui/PT\ Root\ UI_Bold.woff') format('woff');
+}
+
+//////////////////////////////////////
+//              COLORS              //
+//////////////////////////////////////
+
+$noir:                  #000;
+$blanche:               #fff;
+
+$black-almost:          #212529;
+$gray-dark:             #808080;
+$gray-ligth:            #C4C4C4;
+$white-almost:          #F7F9FA;
+$green:                 #8FDDC3;
+$violet:                #5d72e9;
+$violet-hover:          #455bd9;
+
+     // BG
+$bg-body-color:         $white-almost;
+$bg-nav-color:          $noir;
+$bg-card-color:         $blanche;
+$bg-footer-color:       $noir;
+$bg-btn:                $violet;
+$bg-btn-hover:          $violet-hover;
+
+    // Font
+        // On black
+$color-suptitle-light:  $gray-dark;
+$color-title-light:     $blanche;
+$color-text-light:      $blanche;
+        // On white
+$color-title-dark:      $black-almost;
+$color-subtitle-dark:   $noir;
+$color-text-dark:       $black-almost;
+        // Nav-link
+$color-navlink:         $blanche;
+$color-navlink-hover:   $green;
+        // Btn
+$color-btn:             $blanche;
+        // Other
+$color-green:           $green;
+
+
+
+//////////////////////////////////////
+//              TEXT                //
+//////////////////////////////////////
+/*
+
+font-family: 'PT Root UI Regular';
+font-family: 'PT Root UI Light';
+font-family: 'PT Root UI Medium';
+font-family: 'PT Root UI Bold';
+
+*/
+
+    // Familys
+$font-regular:          'PT Root UI Regular';
+$font-light:            'PT Root UI Light';
+$font-bold:             'PT Root UI Bold';
+        // Large
+$font-suptitle:         $font-light;
+$font-title:            $font-bold;
+$font-suptitle:         $font-regular;
+$font-text:             $font-regular;
+
+    // Size
+        // Titles
+$title-lg:              40px;
+$title-md:              32px;
+$title-sm:              22px;
+        // Text
+$text-lg:               20px;
+$text-md:               16px;
+$text-sm:               12px;
+
+       
+
+//////////////////////////////////////
+//           SCREEN SIZE            //
+//////////////////////////////////////
+
+        // Extra small screen / phone
+$screen-xs:             480px;
+$screen-xs-min:         $screen-xs;             // 480px
+$screen-phone:          $screen-xs-min;         // 480px
+// $screen-xs-max:         $screen-sm-min - 1;   // 767px
+        // Small screen / tablet
+$screen-sm:             768px;
+$screen-sm-min:         $screen-sm;             // 768px
+$screen-tablet:         $screen-sm-min;         // 768px
+// $screen-sm-max:         ($screen-md-min - 1);   // 991px
+        // Medium screen / desktop
+$screen-md:             992px;
+$screen-md-min:         $screen-md;             // 992px
+$screen-desktop:        $screen-md-min;         // 992px
+// $screen-md-max:         ($screen-lg-min - 1);   // 1199px
+        // Large screen / wide desktop
+$screen-lg:             1200px;
+$screen-lg-min:         $screen-lg;             // 1200px
+// $screen-desktop:        $screen-lg-min;         // 1200px

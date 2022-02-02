@@ -1,0 +1,71 @@
+@use '../../style/variables' as *;
+
+.header {
+    height: 100vh;
+    background-color: $noir;
+    background-image: url('../../assets/images/header.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+
+    color: $color-text-light;
+
+    padding: 3rem 0;
+    
+
+    &__content {
+        max-width: 70%;
+        width: 100%;
+
+        padding: 3rem 0;
+
+        margin-bottom: 3rem;
+
+        &-suptitle {
+            color: $color-suptitle-light;
+            font-size: $text-md;
+
+            margin-bottom: 1rem;
+        }
+        &-title {
+            color: $color-title-light;
+            font-size: $title-lg;
+            font-family: $font-bold;
+
+            margin-bottom: 3rem;
+        }
+        &-info {
+            margin-bottom: 1rem;
+
+            .header-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+
+                &_item {
+                    color: $color-suptitle-light;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        margin-right: 4px;
+                    }
+                    span {
+                        margin-right: 24px;
+                    }
+
+                    &:first-child {
+                        color: $color-green;
+                    }
+                }
+            }
+        }
+
+        &-text {
+            font-family: $font-light;
+            color: $color-text-light;
+            font-size: $title-sm;
+        }
+    }
+}

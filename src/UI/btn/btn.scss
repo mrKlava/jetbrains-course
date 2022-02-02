@@ -1,0 +1,31 @@
+@use '../../style/variables' as *;
+
+.btn {
+    cursor: pointer;
+    
+    background-color: $bg-btn;
+
+    color: $color-btn;
+    font-size: $text-lg;
+    font-family: $font-regular;
+
+    border: none;
+    outline: 0;
+    border-radius: .3rem;
+    padding: .5rem 1rem;
+
+    transition: background-color .1s linear;
+
+    &:hover {
+        background-color: $bg-btn-hover;
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+
+    span {
+        font-size: $text-md;
+    }
+}
