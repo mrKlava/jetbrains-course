@@ -109,5 +109,10 @@
                 "link": "https://hyperskill.org/tracks"
             }
         }
+    },
+    "footer": {
+        "link": "https://github.com/mrKlava",
+        "linkText": "mr.klava",
+        "text": "made by"
     }
 }

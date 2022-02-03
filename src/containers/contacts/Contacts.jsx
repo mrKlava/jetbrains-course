@@ -13,10 +13,10 @@ function Contacts(props) {
 						<JetBrains />
 					</div>
 					<div className="contacts-inner__link large">
-						<a href={props.data.links.large.link}><span>{props.data.links.large.text}</span></a>
+						<a href={props.data.links.large.link} target='_blank'><span>{props.data.links.large.text}</span></a>
 					</div>
 					<div className="contacts-inner__link small">
-						<a href={props.data.links.small.link}><span>{props.data.links.small.text}</span></a>
+						<a href={props.data.links.small.link} target='_blank'><span>{props.data.links.small.text}</span></a>
 					</div>
 				</div>
 			</div>

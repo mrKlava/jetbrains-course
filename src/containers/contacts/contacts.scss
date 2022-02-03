@@ -4,13 +4,16 @@
     background-color: $bg-card;
 
     &-inner {
-        height: 300px;
         width: 100%;
         background-image: url('../../assets/images/contacts.svg');
         background-repeat: no-repeat;
         background-position: 100% 0;
+      
+        padding: 3rem 0;
 
         &__image {
+            margin-bottom: 1rem;
+
             svg {
                 
             }
@@ -18,7 +21,19 @@
 
         &__link {
             a {
+                width: 70%;
                 text-decoration: none;
+                color: $color-text-dark;
+            }
+
+            &.large {
+                font-family: $font-bold;
+                font-size: $title-md;
+
+                margin-bottom: 1rem;
+            }
+            &.small {
+                font-size: $title-sm;
             }
         }
     }

@@ -1,0 +1,20 @@
+@use '../../style/variables' as *;
+
+.footer {
+    height: 3rem;
+    background-color: $bg-nav;
+
+    font-size: $text-lg;
+    color: $color-text-light;
+    text-align: center;
+    
+    &__content {
+
+        &-text {
+            
+        }
+        &-link {
+            margin-left: .5rem;
+        }
+    }
+}
