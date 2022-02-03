@@ -6,8 +6,10 @@ import './list.scss';
 
 function List(props) {
   	return (
-      	<ul>
-			  <ListItem text={props.text}/>
+      	<ul className='info-list'>
+			  {(props.data).map(function(item, index) {
+			  	return <ListItem data={item} key={index} />
+			  })}
     	</ul>
   	);
 }

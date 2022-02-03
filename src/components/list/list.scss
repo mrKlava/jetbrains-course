@@ -1,5 +1,18 @@
 @use '../../style/variables' as *;
 
-ul {
-   
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    &__item {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        
+        span {
+            margin-right: 1.5rem;
+        }
+    }
 }

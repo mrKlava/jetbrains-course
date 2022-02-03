@@ -1,0 +1,54 @@
+@use '../../style/variables' as *;
+
+.projects__cards-card {
+    width: 100%;
+    max-width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex-grow: 0;
+
+
+    background-color: $bg-card;
+    box-shadow: 0 0 .5rem;
+    border-radius: .5rem;
+
+    padding: 1.3rem;
+
+    margin: 1rem 0;
+
+    transition: max-width .1s  linear,
+                box-shadow .1s  linear;
+    &:hover {
+        z-index: 5;
+        box-shadow: 0 0 1rem;
+        max-width: 33%;
+
+        .card-item__full {
+            display: block;
+        }
+        .card-item__text.short {
+            display: none;
+        }
+    }
+
+    .card-item {        
+        margin-bottom: .5rem;
+
+        &__title {
+            margin-bottom: .5rem;
+
+        }
+        &__text {
+            &.full {
+                margin-bottom: .5rem;
+            }
+        }
+
+        &__full {
+            display: none;
+        }
+    }
+}

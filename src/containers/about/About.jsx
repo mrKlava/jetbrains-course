@@ -3,6 +3,7 @@ import React from 'react';
 import './about.scss';
 
 import {ReactComponent as Education} from '../../assets/images/education.svg'
+import { List } from '../../components';
 
 function About(props) {
   return <div className='about' id='about'>
@@ -14,10 +15,7 @@ function About(props) {
 					<div className="about__content-item__text">{props.data.card.text}</div>
 					<div className="about__content-item__bold">{props.data.card.bold}</div>
 					<div className="about__content-item__list">
-						<ul className="list">
-							<li className="list-item">{props.data.card.list[0]}</li>
-							<li className="list-item">{props.data.card.list[1]}</li>
-						</ul>
+						<List data={props.data.card.list}  />
 					</div>
 				</div>
 				<div className="about__content-item education">

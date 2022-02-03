@@ -2,10 +2,26 @@ import React from 'react';
 
 import './contacts.scss'
 
-function Contacts() {
-  return <div>
+import {ReactComponent as JetBrains} from '../../assets/images/logo_academy.svg'
 
-  </div>;
+function Contacts(props) {
+	return (
+		<div className='contacts' id='contacts'>
+			<div className="container">
+				<div className="contacts-inner">
+					<div className="contacts-inner__image">
+						<JetBrains />
+					</div>
+					<div className="contacts-inner__link large">
+						<a href={props.data.links.large.link}><span>{props.data.links.large.text}</span></a>
+					</div>
+					<div className="contacts-inner__link small">
+						<a href={props.data.links.small.link}><span>{props.data.links.small.text}</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default Contacts;

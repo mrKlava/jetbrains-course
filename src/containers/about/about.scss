@@ -24,7 +24,17 @@
                 margin: 1rem 0;
             }
             &__list {
+                .info-list {
+                    flex-direction: column;
 
+                    &__item {
+                        margin-bottom: 1rem;
+                        
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
             }
             &__image {
                 margin-bottom: 1.5rem;

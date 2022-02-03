@@ -9,6 +9,8 @@
 
     color: $color-text-light;
 
+    margin-bottom: 3rem;
+
     // padding: 3rem 0;
     
 
@@ -36,23 +38,12 @@
         &-info {
             margin-bottom: 1rem;
 
-            .header-list {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                display: flex;
-
-                &_item {
+            .info-list {
+                &__item {
                     color: $color-suptitle-light;
-                    text-align: center;
-                    display: flex;
-                    align-items: center;
 
                     svg {
                         margin-right: 4px;
-                    }
-                    span {
-                        margin-right: 24px;
                     }
 
                     &:first-child {

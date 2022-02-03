@@ -1,0 +1,25 @@
+@use '../../style/variables' as *;
+
+.contacts {
+    background-color: $bg-card;
+
+    &-inner {
+        height: 300px;
+        width: 100%;
+        background-image: url('../../assets/images/contacts.svg');
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+
+        &__image {
+            svg {
+                
+            }
+        }
+
+        &__link {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}

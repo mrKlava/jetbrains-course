@@ -1,6 +1,7 @@
 @use '../../style/variables' as *;
 
 .navbar {
+    z-index: 10;
     position: fixed;
 
     height: 3rem;
