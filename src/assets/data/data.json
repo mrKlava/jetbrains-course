@@ -1,4 +1,29 @@
 {
+    "navbar": {
+        "logo": {
+            "link": "#header",
+            "logo": "LOGO"
+        },
+        "links": [
+            {
+                "text": "About",
+                "link": "#about"
+            },
+            {
+                "text": "Projects",
+                "link": "#projects"
+            },
+            {
+                "text": "Contacts",
+                "link": "#contacts"
+            },
+            {
+                "text": "Footer",
+                "link": "#footer"
+            }
+        ]
+
+    },
     "header": {
         "suptitle": "Have passed this training",
         "title": "Track: Frontend Developer",

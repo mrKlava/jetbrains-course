@@ -1,0 +1,30 @@
+@use '../../style/variables' as *;
+
+.navbar-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__link {
+        margin-right: 1.5rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-navlink;
+
+            transition: color .2s linear;
+
+            &:hover {
+                color: $color-navlink-hover;
+            }
+
+            &.active {
+                color: $color-navlink-hover
+            }
+        }
+    }
+}

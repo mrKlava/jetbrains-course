@@ -1,47 +1,98 @@
 @use '../../style/variables' as *;
 
 .navbar {
-    z-index: 10;
+    background-color: $bg-navbar;
+
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 
-    height: 3rem;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: $bg-nav;
+    z-index: 10;
+    
+    &-inner {
+        position: relative;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        height: 3rem;
+        padding: 0 .625rem;
 
-    &__logo {
-        &-link {
-            text-decoration: none;
-            color: $color-navlink
-        }
-    }
-
-    &__list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        
         display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
 
-        &-item {
-            margin-right: 3rem;
+        &__logo {
+            a {
+                img {
 
-            &:last-child {
-                margin-right: 0;
+                }
             }
-            &-link {
-                text-decoration: none;
-                color: $color-navlink;
+        }
+        
+        &__nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
 
-                transition: color .2s linear;
+            .navbar-links {
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-                &:hover {
-                    color: $color-navlink-hover;
+                &__link {
+                    a {
+                        font-size: $text-lg;
+                    }
+
+                }
+            }
+
+            @media (max-width: $screen-sm-min) {
+                display: none;
+            }
+
+            &-mob {
+                @media (max-width: $screen-sm-min) {
+                    display: block;
+                }
+
+                display: none;
+                background-color: $bg-navbar;
+
+                position: fixed;
+                top: 3rem;
+                right: -195px;
+                z-index: 1;
+
+                transition: right .3s ease;
+
+                &.active {
+                    right: 1px;
+                }
+
+                .navbar-links {
+                    &__link {
+                        margin: 0;
+                        padding: 0.5rem 2rem;
+
+                        border-bottom: solid 1px $blanche;
+
+                        &:first-child {
+                            padding-top: 1rem;
+
+                            border-top: solid 1px $blanche;
+                        }
+
+                        &:last-child {
+                            padding-bottom: 1rem;
+
+                            border-bottom: none;
+                        }
+
+                        a {
+                            font-size: $title-md;
+                        }
+                    }
                 }
             }
         }

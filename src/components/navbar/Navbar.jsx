@@ -1,27 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import './navbar.scss'
+import './navbar.scss';
+
+import { NavbarLinks, Hamburger } from '../../UI';
 
 function Navbar(props) {
-  return <div className='navbar'>
-	  	<div className="navbar__logo">
-			{/* <img src="" alt="" /> */}
-			<a href="#header" className="navbar__logo-link">LOGO</a>
+
+	const eventHandler = hamState => setToggleMobMenu(hamState)
+	
+	const [toggleMobMenu, setToggleMobMenu] = useState('false')
+
+	return (
+		<div className="navbar">
+			<div className="container">
+				<div className="navbar-inner">
+								
+					<div className="navbar-inner__logo">{/* logo */}
+						<a href={props.data.logo.link}>{props.data.logo.logo}</a>
+					</div>
+
+					<div className="navbar-inner__nav">{/* DESKTOP */}	
+						<NavbarLinks links={props.data.links} />{/* links */}
+					</div>
+
+					<div className={toggleMobMenu ? "navbar-inner__nav-mob active" : "navbar-inner__nav-mob"}>{/* TABLETS / MOBILE */}	
+						<NavbarLinks links={props.data.links} />{/* links */}
+					</div>
+
+					<Hamburger onChange={eventHandler} />
+
+				</div>
+			</div>
 		</div>
-
-	  	<ul className='navbar__list'>
-
-			{/* <li className='navbar__list-item'><a href={props.link} className='navbar__list-item-link'>{props.linkTo}</a></li>
-			<li className='navbar__list-item'><a href={props.link} className='navbar__list-item-link'>{props.linkTo}</a></li>
-			<li className='navbar__list-item'><a href={props.link} className='navbar__list-item-link'>{props.linkTo}</a></li>
-			<li className='navbar__list-item'><a href={props.link} className='navbar__list-item-link'>{props.linkTo}</a></li> */}
-
-			<li className='navbar__list-item'><a href='#about' className='navbar__list-item-link'>About</a></li>
-			<li className='navbar__list-item'><a href='#projects' className='navbar__list-item-link'>Projects</a></li>
-			<li className='navbar__list-item'><a href='#contacts' className='navbar__list-item-link'>Contacts</a></li>
-			<li className='navbar__list-item'><a href='#footer' className='navbar__list-item-link'>Footer</a></li>
-	  	</ul>
-  	</div>;
+	);
 }
 
 export default Navbar;

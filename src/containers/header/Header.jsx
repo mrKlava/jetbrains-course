@@ -13,7 +13,6 @@ function Header(props) {
     return (
         <div className='header' id='header'>
             <div className="container">
-            <Navbar />
                 <div className="header__content">
                     <div className="header__content-suptitle">{props.data.suptitle}</div>
                     <div className="header__content-title">{props.data.title} </div>

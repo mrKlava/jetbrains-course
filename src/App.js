@@ -4,10 +4,12 @@ import data from './assets/data/data.json'
 
 
 import './App.scss'
+import { Navbar } from './components';
 
 function App() {
   return (
     <div className="App">
+		<Navbar data={data.navbar} />
 		<Header data={data.header} />
 		<About data={data.about} />
 		<Projects data={data.projects} />
