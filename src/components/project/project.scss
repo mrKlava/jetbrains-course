@@ -1,54 +1,38 @@
 @use '../../style/variables' as *;
 
-.projects__cards-card {
-    width: 100%;
-    max-width: 30%;
+.projects__cards {
+    &-card {
+      display: block;
+      position: relative;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    flex-grow: 0;
-
-
-    background-color: $bg-card;
-    box-shadow: 0 0 .5rem;
-    border-radius: .5rem;
-
-    padding: 1.3rem;
-
-    margin: 1rem 0;
-
-    transition: max-width .1s  linear,
-                box-shadow .1s  linear;
-    &:hover {
-        z-index: 5;
-        box-shadow: 0 0 1rem;
-        max-width: 33%;
-
-        .card-item__full {
-            display: block;
+      .card {
+        &__front,
+        &__back {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+  
+            backface-visibility: hidden;
+            transition: transform 0.5s linear 0s;
         }
-        .card-item__text.short {
-            display: none;
+  
+        &__front {
+            transform: perspective(600px) rotateY(0deg);
         }
-    }
-
-    .card-item {        
-        margin-bottom: .5rem;
-
-        &__title {
-            margin-bottom: .5rem;
-
+        &__back {
+            transform: perspective(600px) rotateY(180deg);
         }
-        &__text {
-            &.full {
-                margin-bottom: .5rem;
-            }
-        }
-
-        &__full {
-            display: none;
-        }
+      }
+      &:hover .card__back {
+            transform: perspective(600px) rotateY(0deg);
+            z-index: 3;
+      }
+      &:hover .card__front {
+            transform: perspective(600px) rotateY(-180deg);
+            z-index: 3;
+      }
     }
 }
+

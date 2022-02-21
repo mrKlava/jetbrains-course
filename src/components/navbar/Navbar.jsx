@@ -8,7 +8,7 @@ function Navbar(props) {
 
 	const eventHandler = hamState => setToggleMobMenu(hamState)
 	
-	const [toggleMobMenu, setToggleMobMenu] = useState('false')
+	const [toggleMobMenu, setToggleMobMenu] = useState(false)
 
 	return (
 		<div className="navbar">
@@ -23,7 +23,7 @@ function Navbar(props) {
 						<NavbarLinks links={props.data.links} />{/* links */}
 					</div>
 
-					<div className={toggleMobMenu ? "navbar-inner__nav-mob active" : "navbar-inner__nav-mob"}>{/* TABLETS / MOBILE */}	
+					<div className={toggleMobMenu ? "navbar-inner__nav-mob active" : "navbar-inner__nav-mob"  } >{/* TABLETS / MOBILE */}	
 						<NavbarLinks links={props.data.links} />{/* links */}
 					</div>
 

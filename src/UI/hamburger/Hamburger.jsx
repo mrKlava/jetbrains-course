@@ -6,8 +6,6 @@ function Hamburger(props) {
     
     const [toggleHam, setToggleHam] = useState(false)
 
-    const handleChange = e => e.toggleHam
-
     useEffect(() => {
         if (props.onChange) {
             props.onChange(toggleHam)
@@ -21,7 +19,7 @@ function Hamburger(props) {
         <div    className='hamburger'
                 className={ !toggleHam ? 'hamburger' : 'hamburger active' }
                 onClick={ ()=>setToggleHam(!toggleHam) }
-                onChange={handleChange}
+                onChange={setToggleHam}
             >
             <span></span>
             <span></span>

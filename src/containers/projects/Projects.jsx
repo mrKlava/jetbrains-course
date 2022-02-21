@@ -12,6 +12,7 @@ function Projects(props) {
         	<div className="projects__subtitle">{props.data.subtitle}</div>
         	<div className="projects__suptext">{props.data.suptext}</div>
         	<div className="projects__text">{props.data.text}</div>
+			
         	<div className="projects__cards">
 
 				{(props.data.cards).map(function(item, index) {
