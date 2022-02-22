@@ -12,6 +12,7 @@ function Contacts(props) {
 					<div className="contacts-inner__image">
 						<JetBrains />
 					</div>
+					<span className='mob-span'>Links to:</span>
 					<div className="contacts-inner__link large">
 						<a href={props.data.links.large.link} target='_blank'><span>{props.data.links.large.text}</span></a>
 					</div>

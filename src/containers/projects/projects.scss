@@ -1,26 +1,51 @@
 @use '../../style/variables' as *;
 
 .projects {
-    padding: 3rem 0;
+    padding: 5rem 1rem;
+
+    margin-bottom: 3rem;
+
+    @media (max-width: $screen-sm) {
+        padding: 3rem 2rem;
+    }
 
     &__title {
         font-family: $font-bold;
-        font-size: $title-md;
+        font-size: $title-lg;
         
         margin-bottom: 1.5rem;
+
+        @media (max-width: $screen-xs) {
+            font-size: $title-md;
+            margin-bottom: .5rem;
+        }
     }
     &__subtitle {
         font-size: $title-sm;
 
         margin-bottom: .5rem;
+
+        @media (max-width: $screen-xs) {
+            font-size: $text-lg;
+        }
     }
+
+    
     &__suptext {
         margin-bottom: .5rem;
+
+        @media (max-width: $screen-xs) {
+            font-size: $text-sm;
+        }
     }
     &__text {
         font-size: $title-sm;
 
         margin-bottom: .5rem;
+
+        @media (max-width: $screen-xs) {
+            font-size: $text-lg;
+        }
     }
     &__cards {
         display: flex;
@@ -30,6 +55,14 @@
         &-card {
             width: 30%;
             height: 20rem;
+
+            @media (max-width: $screen-md) {
+                width: 47%;
+            }
+
+            @media (max-width: $screen-sm) {
+                width: 100%;
+            }
 
             .card {
 
@@ -60,6 +93,20 @@
 
                 &__text {
                     margin-bottom: .5rem;
+
+                    @media (max-width: $screen-xs) {
+                        font-size: $text-sm;
+                        line-height: 1.5rem;
+                    }
+
+                    span {
+                        display: none;
+                        color: $color-navlink-hover;
+                        margin-left: .3rem;
+                        @media (max-width: $screen-sm) {
+                            display: inline-block;
+                        }
+                    }
                 }
                 &__list {
 

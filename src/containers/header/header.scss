@@ -6,34 +6,57 @@
     background-image: url('../../assets/images/header.svg');
     background-repeat: no-repeat;
     background-position: 100% 0;
-
-    color: $color-text-light;
-
-    margin-bottom: 3rem;
-
-    // padding: 3rem 0;
     
+    color: $color-text-light;
+    
+    margin-bottom: 3rem;
+    padding: 5rem 0;
 
+    @media (max-width: $screen-xs) {
+        padding: 5rem 0; 
+        height: 100%;
+    }
+    
     &__content {
         max-width: 70%;
         width: 100%;
-
-        padding: 3rem 0;
-
+        
+        padding: 5rem 1rem;
         margin-bottom: 3rem;
 
+        @media (max-width: $screen-sm) {
+            max-width: 100%;
+        
+            text-align: justify;
+
+            padding: 5rem 2rem;
+        }
+        
+        @media (max-width: $screen-xs) {
+            padding: 0 2rem;
+            margin-top: 2rem;;
+        }
+        
         &-suptitle {
             color: $color-suptitle-light;
             font-size: $text-md;
-
             margin-bottom: 1rem;
         }
         &-title {
             color: $color-title-light;
-            font-size: $title-lg;
+            font-size: $title-xl;
             font-family: $font-bold;
+            text-align: start;
 
             margin-bottom: 3rem;
+
+            @media (max-width: $screen-xs) {
+                font-size: $title-md;
+                text-align: left;
+
+                margin-bottom: 1.5rem;
+            }
+
         }
         &-info {
             margin-bottom: 1rem;
@@ -57,6 +80,21 @@
             font-family: $font-light;
             color: $color-text-light;
             font-size: $title-sm;
+
+            @media (max-width: $screen-xs) {
+                font-size: $text-md;
+                line-height: 2rem;
+
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+    }
+    .btn {
+        margin: 0 1rem;
+
+        @media (max-width: $screen-sm) { 
+            margin: 0 2rem;
         }
     }
 }

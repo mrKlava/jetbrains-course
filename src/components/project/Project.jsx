@@ -17,27 +17,16 @@ function Project(props) {
 						</div>
 						<div className="card__text">
 							{props.data.text.short}
+							<span>Click to flip...</span>
+
 						</div>
 					</div>
+					
 					<div className="card__list">
 						<List data={props.data.list} />
 					</div>
 				</div>
 			</div>
-
-			{/* <div className="card__front">
-				<div className="card__front-content">
-					<div className="card__title">
-						{props.data.title}
-					</div>
-					<div className="card__text">
-						{props.data.text.short}
-					</div>
-					<div className="card__list">
-						<List data={props.data.list} />
-					</div>
-				</div>
-			</div> */}
 			
 			<div className="card__back">
 				<div className="card__back-content">

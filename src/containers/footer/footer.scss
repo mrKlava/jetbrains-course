@@ -6,15 +6,30 @@
 
     font-size: $text-lg;
     color: $color-text-light;
-    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: $screen-xs) {
+        font-size: $text-md
+    }
     
     &__content {
 
         &-text {
-            
+            text-align: center;
         }
         &-link {
+            color: $color-navlink-hover;
+            text-decoration: none;
             margin-left: .5rem;
+
+            transition: color .1s linear;
+
+            &:hover {
+                color: $violet;
+            }
         }
     }
 }

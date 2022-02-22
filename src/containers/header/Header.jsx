@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Navbar, List } from '../../components';
+import { List } from '../../components';
 import { Btn } from '../../UI';
 
 import {ReactComponent as PeopleLogo} from '../../assets/images/icons/people.svg'
@@ -22,9 +22,8 @@ function Header(props) {
                     <div className="header__content-text">{props.data.text}</div>
                 </div>
                 <Btn 
-                        className='header__content-btn'
-                        big={props.data.btn.big} 
-                        small={props.data.btn.small} 
+                    big={props.data.btn.big} 
+                    small={props.data.btn.small} 
                 />
             </div>
         </div>

@@ -28,4 +28,12 @@
     span {
         font-size: $text-md;
     }
+
+    @media (max-width: $screen-xs) {
+        font-size: $text-md;
+
+        span {
+            font-size: $text-sm;
+        }
+    }
 }

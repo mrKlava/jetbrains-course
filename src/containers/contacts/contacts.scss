@@ -3,37 +3,89 @@
 .contacts {
     background-color: $bg-card;
 
+   
+
     &-inner {
         width: 100%;
         background-image: url('../../assets/images/contacts.svg');
         background-repeat: no-repeat;
         background-position: 100% 0;
       
-        padding: 3rem 0;
+        padding: 3rem 1rem;
+        
+        @media (max-width: $screen-sm) {
+            padding: 5rem 2rem;
+        }
 
         &__image {
             margin-bottom: 1rem;
 
-            svg {
-                
+            // svg {}
+        }
+
+        .mob-span {
+            display: none;
+            font-size: $text-lg;
+            color: $violet-hover;
+            margin-bottom: .5rem;
+
+            @media (max-width: $screen-sm) {
+                display: block;;
             }
         }
 
         &__link {
             a {
-                width: 70%;
+                width: 100%;
                 text-decoration: none;
                 color: $color-text-dark;
+
+                span {
+                    width: 90%;
+                    display: inline-block;
+                    transition: transform .2s linear;
+
+                    @media (max-width: $screen-sm) {
+                        text-decoration: underline;
+                    }
+                }
+
+
+                &:hover span{
+                    transform: translate(10%);
+                    color: $violet-hover;
+                }
             }
 
             &.large {
                 font-family: $font-bold;
-                font-size: $title-md;
+                font-size: $title-lg;
 
                 margin-bottom: 1rem;
+
+                @media (max-width: $screen-sm) {
+                    font-size: $title-md;
+
+                    margin-bottom: .5rem;
+                }
+
+                @media (max-width: $screen-xs) {
+                    font-size: $text-lg;
+
+                    margin-bottom: .5rem;
+                }
+                
             }
             &.small {
                 font-size: $title-sm;
+
+                @media (max-width: $screen-sm) {
+                    font-size: $text-lg;
+                }
+
+                @media (max-width: $screen-xs) {
+                    font-size: $text-lg;
+                }
             }
         }
     }
