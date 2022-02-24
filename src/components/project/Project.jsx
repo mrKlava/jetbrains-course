@@ -1,7 +1,9 @@
 import React from 'react';
 
 import { List } from '../../components'
+import { CaseConverter } from '../../projects';
 import { Btn } from '../../UI';
+import Modal from '../modal/Modal';
 
 import './project.scss';
 
@@ -43,6 +45,11 @@ function Project(props) {
 					</div>
 				</div>
 			</div>
+
+			<Modal>
+				<CaseConverter />
+			</Modal>
+
 
 		</div>
 	);

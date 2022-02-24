@@ -19,6 +19,7 @@ function Projects(props) {
 					return <Project data={item} key={index} />
 				})}
 
+
 			</div>
     	</div>
     </div>
