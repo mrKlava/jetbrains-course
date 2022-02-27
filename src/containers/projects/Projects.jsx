@@ -15,10 +15,11 @@ function Projects(props) {
 			
         	<div className="projects__cards">
 
-				{(props.data.cards).map(function(item, index) {
+				{/* {(props.data.cards).map(function(item, index) {
 					return <Project data={item} key={index} />
-				})}
+				})} */}
 
+				<Project data={props.data.cards[0]}/>
 
 			</div>
     	</div>
