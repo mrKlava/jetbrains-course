@@ -71,12 +71,8 @@ function CaseConverter() {
                     document.body.removeChild(element);
                 }
             },
-        }
+        },
     ]
-
-   
-    
-
 
     return (
         <div className='case-converter'>

@@ -1,1 +1,65 @@
 @use '../../style/variables' as *;
+
+.flashcards {
+    padding: 3rem;
+
+    &__title {
+        font-size: $title-lg;
+        font-family: $font-bold;
+        margin-bottom: 3rem;
+    }
+    
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      
+        .card {
+          display: block;
+          position: relative;
+          width: 30%;
+          height: 10rem;
+
+          margin-bottom: 1rem;
+      
+          .front,
+          .back {
+            position: absolute;
+
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+
+            background-color: gray;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+      
+            backface-visibility: hidden;
+            transition: transform 0.5s linear 0s;
+      
+            .content {
+            }
+          }
+      
+          .front {
+            transform: perspective(600px) rotateY(0deg);
+          }
+          .back {
+            transform: perspective(600px) rotateY(180deg);
+          }
+      
+          &:hover .back {
+            transform: perspective(600px) rotateY(0deg);
+            z-index: 3;
+          }
+          &:hover .front {
+            transform: perspective(600px) rotateY(-180deg);
+            z-index: 3;
+          }
+        }
+    }
+}
