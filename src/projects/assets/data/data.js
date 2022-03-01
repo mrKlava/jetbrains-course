@@ -44,7 +44,11 @@ const dataProjects = {
             ],
 
         ]
-    }
+    },
+    "virtualPiano": 
+    {
+        "title": "Virtual Piano"
+    },
 }
 
 export default dataProjects

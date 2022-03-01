@@ -15,8 +15,7 @@ function Flashcards() {
 
   function refreshCards() {
     let index = getRundomIndex(data.flascards.cards.length - 1)
-
-    console.log(index)
+    
     setIndex(index)
   }
 

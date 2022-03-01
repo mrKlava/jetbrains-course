@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { List } from '../../components'
-import { CaseConverter, Flashcards } from '../../projects';
+import { CaseConverter, Flashcards, VirtualPiano } from '../../projects';
 import { Btn } from '../../UI';
 import Modal from '../modal/Modal';
 
@@ -48,7 +48,8 @@ function Project(props) {
 
 			<Modal>
 				{/* <CaseConverter /> */}
-				<Flashcards />
+				{/* <Flashcards /> */}
+				<VirtualPiano />
 			</Modal>
 
 

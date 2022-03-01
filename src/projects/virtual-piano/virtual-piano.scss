@@ -1,1 +1,153 @@
 @use '../../style/variables' as *;
+
+.virtaul-piano {
+    padding: 3rem;
+
+    &__title {
+        font-size: $title-lg;
+        font-family: $font-bold;
+        margin-bottom: 3rem;
+
+        @media (max-width: $screen-sm) {
+            font-size: $title-sm;
+        }
+    }
+    
+    &__content {
+        text-align: center;
+        
+        .keys {
+            position: relative;
+            width: 780px;
+
+            margin: 0 auto;
+
+            @media (max-width: $screen-md) {
+                width: 578px;
+            }
+
+            @media (max-width: $screen-sm) {
+                width: 318px;
+            }
+
+            .key {
+                display: inline-block;
+
+                font-size: $title-lg;
+                text-align: center;
+
+                cursor: pointer;
+
+                .pressed {
+                    background-color: $green;
+                }
+
+                @media (max-width: $screen-sm) {
+                    font-size: $text-lg;
+                }
+
+                &-white {
+                    width: 110px;
+                    height: 50vh;
+              
+                    background-color: #fff;
+                    border: 1px solid #000;
+              
+                    color: #000;
+
+                    @media (max-width: $screen-md) {
+                        width: 82px;
+                    }
+
+                    @media (max-width: $screen-sm) {
+                        width: 45px;
+                        height: 40vh;
+                    }
+                }
+
+                &-black {
+                    position: absolute;
+                    width: 75px;
+                    height: 30vh;
+
+                    z-index: 10;
+              
+                    background-color: black;
+                    border: 1px solid #fff;
+              
+                    color: #fff;
+
+                    @media (max-width: $screen-md) {
+                        width: 56px;
+                    }
+
+                    @media (max-width: $screen-sm) {
+                        width: 30px;
+                        height: 20vh;
+                    }
+
+                        &:first-child {
+                            left: 75px;
+
+                            @media (max-width: $screen-md) {
+                                left: 57px;
+                            }
+
+                            @media (max-width: $screen-sm) {
+                                left: 31px;
+                            }
+                        }
+                    
+                        &:nth-child(2) {
+                            left: 190px;
+
+                            @media (max-width: $screen-md) {
+                                left: 138px;
+                            }
+
+                            @media (max-width: $screen-sm) {
+                                left: 77px;
+                            }
+                        }
+                
+                        &:nth-child(3) {
+                            right: 295px;
+
+                            @media (max-width: $screen-md) {
+                                right: 220px;
+                            }
+
+                            @media (max-width: $screen-sm) {
+                                right: 120px;
+                            }
+                        }
+                
+                        &:nth-child(4) {
+                            right: 185px;
+
+                            @media (max-width: $screen-md) {
+                                right: 137px;
+                            }
+
+                            @media (max-width: $screen-sm) {
+                                right: 77px;
+                            }
+                        }
+                
+                        &:nth-child(5){
+                            right: 75px;
+
+                            @media (max-width: $screen-md) {
+                                right: 55px;
+                            }
+
+                            @media (max-width: $screen-sm) {
+                                right: 30px;
+                            }
+                        }
+                        
+                }
+            }
+        }
+    }
+}
