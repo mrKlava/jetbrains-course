@@ -38,7 +38,7 @@
 
                 cursor: pointer;
 
-                .pressed {
+                &.pressed {
                     background-color: $green;
                 }
 

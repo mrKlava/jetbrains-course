@@ -7,41 +7,47 @@ import keyTones from '../assets/audio/index'
 
 function VirtualPiano() {
 
-  console.log(keyTones)
-
   const suportedKeys = [['A', 'S', 'D', 'F', 'G', 'H', 'J'], ['W', 'E', 'T', 'Y', 'U']]
 
-  function chkKey(arr, e) {
+  const keys = [] 
+  
+  suportedKeys.map((item) => {
+    return keys.push(...item)
+  })
 
-    let keys = []
-
-    arr.map((item) => {
-      return keys.push(...item)
-    })
+  function chkKey(letter) {
 
     for (let i = 0; i < keys.length; i++) {
-      if (`Key${keys[i]}` === e.code || keys[i] === e) {
+      if ( keys[i] === letter ) {
+        console.log(`The '${keys[i]}' key is pressed.`);
 
-        let keyTone = new Audio(keyTones[keys[i]]);
+        const keyTone = new Audio(keyTones[keys[i]]);
+
+        toggleClass(letter)
 
         keyTone.play();
-        return console.log(`The '${keys[i]}' key is pressed.`);
+        return
       }
     }
-    return console.log('Pressed not supported key.');
+
+    console.log('Pressed not supported key.');
+    return
   }
 
-  function toggleClass() {
-
+  function toggleClass(letter) {
+    let target = document.getElementById(letter.toLowerCase())
+    target.classList.add('pressed')
+    setTimeout( () => target.classList.remove('pressed'), 200 )
   }
 
   function handleClick(e) {
-    chkKey(suportedKeys, e.target.innerText)
+    chkKey( e.target.innerText )    // passsing letter
   }
 
   useEffect(() => {
     document.addEventListener('keypress', function (e) {
-      chkKey(suportedKeys, e)
+
+      chkKey( e.key.toUpperCase() )  // passsing letter
     })
   })
 
@@ -55,12 +61,22 @@ function VirtualPiano() {
         <div className="keys">
           {
             suportedKeys[1].map((item, index) => {
-              return <BlackKey letter={item} press={handleClick} key={index} />
+              return <BlackKey 
+                        id={item.toLowerCase()} 
+                        letter={item} 
+                        onClick={handleClick} 
+                        key={index} 
+                    />
             })
           }
           {
             suportedKeys[0].map((item, index) => {
-              return <WhiteKey letter={item} press={handleClick} key={index} />
+              return <WhiteKey 
+                          id={item.toLowerCase()} 
+                          letter={item} 
+                          onClick={handleClick} 
+                          key={index} 
+                      />
             })
           }
         </div>
@@ -76,12 +92,12 @@ export default VirtualPiano
 
 function WhiteKey(props) {
   return (
-    <kbd onClick={props.press} className="key key-white">{props.letter}</kbd>
+    <kbd onClick={props.onClick} id={props.id} className="key key-white">{props.letter}</kbd>
   )
 }
 
 function BlackKey(props) {
   return (
-    <kbd onClick={props.press} className="key key-black">{props.letter}</kbd>
+    <kbd onClick={props.onClick} id={props.id} className="key key-black">{props.letter}</kbd>
   )
 }
