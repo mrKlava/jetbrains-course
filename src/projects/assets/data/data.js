@@ -49,6 +49,10 @@ const dataProjects = {
     {
         "title": "Virtual Piano"
     },
+    "toDoList": 
+    {
+        "title": "To-Do List"
+    }
 }
 
 export default dataProjects

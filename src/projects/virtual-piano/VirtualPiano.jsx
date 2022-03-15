@@ -19,18 +19,18 @@ function VirtualPiano() {
 
     for (let i = 0; i < keys.length; i++) {
       if ( keys[i] === letter ) {
-        console.log(`The '${keys[i]}' key is pressed.`);
+        console.log(`The '${keys[i]}' key is pressed.`)
 
         const keyTone = new Audio(keyTones[keys[i]]);
 
         toggleClass(letter)
 
-        keyTone.play();
+        keyTone.play()
         return
       }
     }
 
-    console.log('Pressed not supported key.');
+    console.log('Pressed not supported key.')
     return
   }
 

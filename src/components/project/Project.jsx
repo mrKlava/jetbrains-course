@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 import { List } from '../../components'
-import { CaseConverter, Flashcards, VirtualPiano } from '../../projects';
-import { Btn } from '../../UI';
-import Modal from '../modal/Modal';
+import { CaseConverter, Flashcards, ToDoList, VirtualPiano,  } from '../../projects'
+import { Btn } from '../../UI'
+import Modal from '../modal/Modal'
 
-import './project.scss';
+import './project.scss'
 
 function Project(props) {
 	return (
@@ -49,7 +49,8 @@ function Project(props) {
 			<Modal>
 				{/* <CaseConverter /> */}
 				{/* <Flashcards /> */}
-				<VirtualPiano />
+				{/* <VirtualPiano /> */}
+				<ToDoList />
 			</Modal>
 
 

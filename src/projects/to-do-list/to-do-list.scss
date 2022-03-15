@@ -1,1 +1,106 @@
 @use '../../style/variables' as *;
+
+.todo {
+    padding: 3rem;
+
+    &__title {
+        font-size: $title-lg;
+        font-family: $font-bold;
+        margin-bottom: 3rem;
+
+        @media (max-width: $screen-sm) {
+            font-size: $title-sm;
+        }
+    }
+    
+    &__content {
+
+        max-height: 100%;
+        
+        &-input {
+            width: 70%;
+            font-size: $text-lg;
+            padding: .5rem 1rem;
+            border: none;
+            border-bottom: 1px solid $violet;
+
+            @media (max-width: $screen-sm) {
+                width: 60%;
+            }
+            @media (max-width: $screen-xs) {
+                font-size: $text-md;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+        &-btn {
+            width: 30%;
+            border-bottom: 1px solid $violet;
+            border-radius: 0 .3rem .3rem 0;
+
+            @media (max-width: $screen-sm) {
+                width: 40%;
+            }
+            @media (max-width: $screen-xs) {
+                padding: .5rem .3rem;
+            }
+        }
+        &-list {
+            // display: block;
+            overflow: auto;
+            height: 500px;
+            box-sizing: border-box;
+
+            padding-inline-start: 0;
+
+            .list-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                font-size: $text-lg;
+
+                margin-bottom: .5rem;
+
+                transition: background .1s linear;
+
+                &:hover {
+                    background: $green;
+                }
+                
+                &.crossed {
+                    text-decoration: line-through;
+                }
+
+                &__content {
+                    &-box {
+                        margin-right: 1rem;
+                        
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                &__btn {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    background: $violet;
+                    border: none;
+                    color: $blanche;
+
+                    padding: .3rem;
+
+                    transition: background .2s linear;
+
+                    &:hover {
+                        background: $violet-hover;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

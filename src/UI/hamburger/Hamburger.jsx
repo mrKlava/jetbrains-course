@@ -16,7 +16,7 @@ function Hamburger(props) {
     // console.log(toggleHam)
 
     return (
-        <div    className='hamburger'
+        <div
                 className={ !toggleHam ? 'hamburger' : 'hamburger active' }
                 onClick={ ()=>setToggleHam(!toggleHam) }
                 onChange={setToggleHam}
