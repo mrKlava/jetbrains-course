@@ -1,3 +1,7 @@
+import mars from '../images/mars.png'
+import rocket from '../images/rocket.png'
+
+
 const dataProjects = {
     "caseConverter": 
     {
@@ -52,6 +56,12 @@ const dataProjects = {
     "toDoList": 
     {
         "title": "To-Do List"
+    },
+    "openSpace": 
+    {
+        "title": "Open Space",
+        "mars": mars,
+        "rocket": rocket,
     }
 }
 

@@ -1,1 +1,48 @@
 @use '../../style/variables' as *;
+
+.open-space {
+    padding: 3rem;
+
+    &__title {
+        font-size: $title-lg;
+        font-family: $font-bold;
+        color: $blanche;
+        margin-bottom: 3rem;
+    }
+    
+    &__content {
+        background: url("../assets/images/space.png");
+        position: absolute;
+        top: 0;
+        // top: 10rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        border-radius: .5rem;
+
+        overflow: hidden;
+
+        .planet-area {
+
+            .mars {
+                position: absolute;
+                width: 400px;
+
+                bottom: -3px;
+                left: -3px;
+                z-index: 3;
+            }
+
+            .rocket {
+                position: absolute;
+                width: 150px;
+                transform: rotate(30deg);
+
+                left: 220px;
+                bottom: 180px;
+                z-index: 2;
+            }
+        }
+    }
+}

@@ -4,29 +4,23 @@ import './hamburger.scss';
 
 function Hamburger(props) {
     
-    const [toggleHam, setToggleHam] = useState(false)
+    const isBurger = props.isBurger
 
-    useEffect(() => {
-        if (props.onChange) {
-            props.onChange(toggleHam)
-        }
-    }, [toggleHam])
-    
-
-    // console.log(toggleHam)
+    function handleClick() {
+        props.updateHam(!isBurger)
+    }
 
     return (
         <div
-                className={ !toggleHam ? 'hamburger' : 'hamburger active' }
-                onClick={ ()=>setToggleHam(!toggleHam) }
-                onChange={setToggleHam}
+                className={ !isBurger ? 'hamburger' : 'hamburger active' }
+                onClick={handleClick}
             >
             <span></span>
             <span></span>
             <span></span>
             <span></span>
         </div>
-    );
+    )
 }
 
 export default Hamburger;

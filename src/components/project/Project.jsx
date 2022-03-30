@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { List } from '../../components'
-import { CaseConverter, Flashcards, ToDoList, VirtualPiano,  } from '../../projects'
+import { CaseConverter, Flashcards, OpenSpace, ToDoList, VirtualPiano, } from '../../projects'
 import { Btn } from '../../UI'
 import Modal from '../modal/Modal'
 
@@ -23,13 +23,13 @@ function Project(props) {
 
 						</div>
 					</div>
-					
+
 					<div className="card__list">
 						<List data={props.data.list} />
 					</div>
 				</div>
 			</div>
-			
+
 			<div className="card__back">
 				<div className="card__back-content">
 					<div className="card__top">
@@ -46,12 +46,6 @@ function Project(props) {
 				</div>
 			</div>
 
-			<Modal>
-				{/* <CaseConverter /> */}
-				{/* <Flashcards /> */}
-				{/* <VirtualPiano /> */}
-				<ToDoList />
-			</Modal>
 
 
 		</div>
