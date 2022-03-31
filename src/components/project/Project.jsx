@@ -46,7 +46,13 @@ function Project(props) {
 				</div>
 			</div>
 
-
+			<Modal>
+				{/* <CaseConverter /> */}
+				{/* <Flashcards /> */}
+				{/* <VirtualPiano /> */}
+				{/* <ToDoList /> */}
+				<OpenSpace />
+			</Modal>
 
 		</div>
 	);
