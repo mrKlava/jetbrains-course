@@ -22,6 +22,7 @@ function Header(props) {
                     <div className="header__content-text">{props.data.text}</div>
                 </div>
                 <Btn 
+                    className='btn'
                     big={props.data.btn.big} 
                     small={props.data.btn.small} 
                 />

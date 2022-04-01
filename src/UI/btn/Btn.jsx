@@ -5,9 +5,9 @@ import './btn.scss';
 function Btn(props) {
   return (
     <button 
-      className={props.class} 
+      className={props.className} 
       id={props.id} 
-      onClick={props.click}
+      onClick={props.onClick}
     >
         {props.big} <br/>
         <span>{props.small}</span>

@@ -8,7 +8,6 @@ import keyTones from '../assets/audio/index'
 function VirtualPiano() {
 
   const suportedKeys = [['A', 'S', 'D', 'F', 'G', 'H', 'J'], ['W', 'E', 'T', 'Y', 'U']]
-
   const keys = [] 
   
   suportedKeys.map((item) => {
@@ -16,7 +15,6 @@ function VirtualPiano() {
   })
 
   function chkKey(letter) {
-
     for (let i = 0; i < keys.length; i++) {
       if ( keys[i] === letter ) {
         console.log(`The '${keys[i]}' key is pressed.`)
@@ -49,46 +47,35 @@ function VirtualPiano() {
 
       chkKey( e.key.toUpperCase() )  // passsing letter
     })
-  })
-
+  }, [])
 
   return (
     <div className='virtaul-piano'>
 
       <div className="virtaul-piano__title">{data.virtualPiano.title}</div>
       <div className="virtaul-piano__content">
-
         <div className="keys">
-          {
-            suportedKeys[1].map((item, index) => {
-              return <BlackKey 
-                        id={item.toLowerCase()} 
-                        letter={item} 
-                        onClick={handleClick} 
-                        key={index} 
-                    />
-            })
-          }
-          {
-            suportedKeys[0].map((item, index) => {
-              return <WhiteKey 
-                          id={item.toLowerCase()} 
-                          letter={item} 
-                          onClick={handleClick} 
-                          key={index} 
-                      />
-            })
-          }
+          {suportedKeys[1].map((item, index) => {
+            return <BlackKey 
+              id={item.toLowerCase()} 
+              letter={item} 
+              onClick={handleClick}
+              key={index} />
+          })}
+          {suportedKeys[0].map((item, index) => {
+            return <WhiteKey 
+              id={item.toLowerCase()} 
+              letter={item} 
+              onClick={handleClick}
+              key={index} />
+          })}
         </div>
-
       </div>
-
     </div>
   )
 }
 
 export default VirtualPiano
-
 
 function WhiteKey(props) {
   return (
