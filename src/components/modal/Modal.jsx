@@ -5,8 +5,8 @@ import './modal.scss'
 function  Modal(props) {
   const active = props.active
 
-  function handleClose() {
-    props.liftClose(false)
+  function handleClose(e) {
+    props.liftClose(e)
   }
 
   return (

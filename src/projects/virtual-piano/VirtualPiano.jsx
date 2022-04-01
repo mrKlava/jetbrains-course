@@ -43,10 +43,14 @@ function VirtualPiano() {
   }
 
   useEffect(() => {
-    document.addEventListener('keypress', function (e) {
 
-      chkKey( e.key.toUpperCase() )  // passsing letter
-    })
+    function listen(e) {
+      chkKey( e.key.toUpperCase() ) // passsing letter
+    }
+
+    document.addEventListener('keypress', listen)
+
+    return () => document.removeEventListener('keypress', listen)
   }, [])
 
   return (

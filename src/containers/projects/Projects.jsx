@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
 
 import { Project, Modal } from '../../components';
 import { CaseConverter, Flashcards, OpenSpace, ToDoList, VirtualPiano, } from '../../projects'
@@ -7,6 +8,7 @@ import './projects.scss';
 
 function Projects(props) {
 	const cards = props.data.cards
+	const [isActive, setIsActive] = useState(false)
 	const projectsArr = [
 		<CaseConverter/>,
 		<Flashcards/>,
@@ -15,7 +17,6 @@ function Projects(props) {
 		<OpenSpace/>,
 		null
 	]
-	const [isActive, setIsActive] = useState(false)
 	const [index, setIndex] = useState(5)
 
 	/* Open window */
@@ -27,7 +28,8 @@ function Projects(props) {
 	}
 
 	/* Close window */
-	function handleClose(trg) {
+	function handleClose(e) {
+
 		setIndex(5)
 		setIsActive(false)
 	}
