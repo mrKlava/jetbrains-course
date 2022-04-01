@@ -1,25 +1,35 @@
 import React, {useState} from 'react';
 
-import { Project } from '../../components';
-// import { CaseConverter, Flashcards, OpenSpace, ToDoList, VirtualPiano, } from '../../projects'
+import { Project, Modal } from '../../components';
+import { CaseConverter, Flashcards, OpenSpace, ToDoList, VirtualPiano, } from '../../projects'
 
 import './projects.scss';
 
 function Projects(props) {
 	const cards = props.data.cards
-// 	const projectsArr = [
-// 		{id: 1, name: CaseConverter},
-// 		{id: 2, name: Flashcards},
-// 		{id: 3, name: VirtualPiano},
-// 		{id: 4, name: ToDoList},
-// 		{id: 5, name: OpenSpace},
-// 		{id: 6, name: () => null}
-// 	]
+	const projectsArr = [
+		<CaseConverter/>,
+		<Flashcards/>,
+		<VirtualPiano/>,
+		<ToDoList/>,
+		<OpenSpace/>,
+		null
+	]
+	const [isActive, setIsActive] = useState(false)
+	const [index, setIndex] = useState(5)
 
-// 	const [project, setProject] = useState(null)     // We cant pass Component trough here
-
+	/* Open window */
 	function openModal(e) {
-		console.dir(e.target)
+		const index = + e.target.id.replace('pro-', '')
+
+		setIndex(index)
+		setIsActive(true)
+	}
+
+	/* Close window */
+	function handleClose(trg) {
+		setIndex(5)
+		setIsActive(false)
 	}
 
 	return (
@@ -32,22 +42,19 @@ function Projects(props) {
 
 				<div className="projects__cards">
 
-					{/* {cards.map(function (item, index) {
-						return <Project
-							data={item}
-							key={index}
-							liftState={openModal}> {projectsArr[index].name()} </Project>
-					})} */}
-
 					{cards.map(function (item, index) {
 						return <Project
 							data={item}
 							key={index}
+							id={`pro-${index}`}
 							liftState={openModal} />
 					})}
 
 				</div>
 			</div>
+			<Modal active={isActive} liftClose={handleClose}>
+				{projectsArr[index]}
+			</Modal>
 		</div>
 	);
 }
