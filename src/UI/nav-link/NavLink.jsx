@@ -6,9 +6,9 @@ function NavLink(props) {
 
 	return (
 		<li className='navbar-links__link'>
-            <a href={props.link.link}>
-                {props.link.text}
-            </a>
+			<a href={props.link.link}>
+				{props.link.text}
+			</a>
 		</li>
 	);
 }

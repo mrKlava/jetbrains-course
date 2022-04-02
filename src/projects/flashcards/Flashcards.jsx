@@ -42,9 +42,9 @@ function Flashcards() {
 
       </div>
       <Btn 
-        class={'btn btn-flaschcards'}
+        className={'btn btn-flaschcards'}
         big={'Refresh'}
-        click={refreshCards}
+        onClick={refreshCards}
       />
     </div>
   )

@@ -15,3 +15,4 @@ export { ReactComponent as ChallenchingSvg } from './icons/challenching.svg'
 /* Images */
 
 export { ReactComponent as EducationSvg } from './education.svg'
+export { ReactComponent as JetBrainsSvg } from './logo_academy.svg'

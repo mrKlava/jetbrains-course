@@ -1,8 +1,9 @@
-import React from 'react';
+import React from 'react'
+
+import { JetBrainsSvg } from '../../assets/images'
 
 import './contacts.scss'
 
-import {ReactComponent as JetBrains} from '../../assets/images/logo_academy.svg'
 
 function Contacts(props) {
 	return (
@@ -10,7 +11,7 @@ function Contacts(props) {
 			<div className="container">
 				<div className="contacts-inner">
 					<div className="contacts-inner__image">
-						<JetBrains />
+						<JetBrainsSvg/>
 					</div>
 					<span className='mob-span'>Links to:</span>
 					<div className="contacts-inner__link large">

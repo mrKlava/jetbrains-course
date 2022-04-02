@@ -11,9 +11,18 @@
         display: flex;
         align-items: center;
 
-        
+        svg {
+            margin-right: 0.25rem;
+        }
+
         span {
-            margin-right: 1.5rem;
+            margin-right: 1.3rem;
+        }
+
+        &:last-child {
+            span {
+                margin-right: 0;
+            }
         }
 
         @media (max-width: $screen-xs) {
@@ -21,6 +30,12 @@
 
             span {
                 margin-right: .9rem;
+            }
+
+            &:last-child {
+                span {
+                    margin-right: 0;
+                }
             }
         }
     }

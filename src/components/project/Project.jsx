@@ -19,6 +19,7 @@ function Project(props) {
 				<div className="card__front-content">
 					<div className='card__top'>
 						<div className="card__title">
+							{arr[1]}
 							{props.data.title}
 						</div>
 						<div className="card__text">

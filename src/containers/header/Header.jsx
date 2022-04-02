@@ -21,11 +21,13 @@ function Header(props) {
 					</div>
 					<div className="header__content-text">{props.data.text}</div>
 				</div>
-				<Btn
-					className='btn'
-					big={props.data.btn.big}
-					small={props.data.btn.small}
-				/>
+				<a href="#projects">
+					<Btn
+						className='btn'
+						big={props.data.btn.big}
+						small={props.data.btn.small}
+					/>
+				</a>
 			</div>
 		</div>
 	);
