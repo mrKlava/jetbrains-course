@@ -5,9 +5,7 @@ import './listItem.scss'
 function ListItem(props) {
   return (
   <li className='info-list__item'>
-      <span>
-        {props.data}
-      </span>
+    {props.children}
   </li>
   );
 }

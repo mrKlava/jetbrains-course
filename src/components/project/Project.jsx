@@ -1,15 +1,15 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 import { List } from '../../components'
 import { Btn } from '../../UI'
 
-
 import './project.scss'
 
 function Project(props) {
+	const arr = props.svgArray
 
 	function handleOpen(e) {
-		props.liftState(e)			// if it will work from here, we wont need lift state 
+		props.liftState(e)
 	}
 
 	return (
@@ -24,12 +24,11 @@ function Project(props) {
 						<div className="card__text">
 							{props.data.text.short}
 							<span>Click to flip...</span>
-
 						</div>
 					</div>
 
 					<div className="card__list">
-						<List data={props.data.list} />
+						<List data={props.data.list} svgArray={arr} />
 					</div>
 				</div>
 			</div>

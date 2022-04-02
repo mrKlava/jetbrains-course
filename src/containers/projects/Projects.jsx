@@ -1,23 +1,24 @@
 import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
 
 import { Project, Modal } from '../../components';
-import { CaseConverter, Flashcards, OpenSpace, ToDoList, VirtualPiano, } from '../../projects'
+import { CaseConverter, Flashcards, OpenSpace, ToDoList, VirtualPiano } from '../../projects'
+import { BookSvg, ClockSvg, StarSvg, ChallenchingSvg, EasySvg, HardSvg, MediumSvg } from '../../assets/images';
 
 import './projects.scss';
 
 function Projects(props) {
-	const cards = props.data.cards
 	const [isActive, setIsActive] = useState(false)
-	const projectsArr = [
-		<CaseConverter/>,
-		<Flashcards/>,
-		<VirtualPiano/>,
-		<ToDoList/>,
-		<OpenSpace/>,
-		null
-	]
 	const [index, setIndex] = useState(5)
+	const cards = props.data.cards
+	const projectsArr = [<CaseConverter/>, <Flashcards/>, <VirtualPiano/>, <ToDoList/>, <OpenSpace/>, null]
+	const difficulty = [<EasySvg/>, <MediumSvg/>, <HardSvg/>, <ChallenchingSvg/>]
+
+	/* Handle SVG array */
+	function creatSvgArray(item, index) {
+		const svgArr = [<StarSvg/>, difficulty[item.difficulty], <ClockSvg/>, <BookSvg/>]
+
+		return svgArr
+	}
 
 	/* Open window */
 	function openModal(e) {
@@ -49,7 +50,8 @@ function Projects(props) {
 							data={item}
 							key={index}
 							id={`pro-${index}`}
-							liftState={openModal} />
+							liftState={openModal}
+							svgArray={creatSvgArray(item, index)} />
 					})}
 
 				</div>

@@ -51,6 +51,7 @@ const dataProjects = {
     },
     "virtualPiano": 
     {
+        "difficulty": 2,
         "title": "Virtual Piano"
     },
     "toDoList": 

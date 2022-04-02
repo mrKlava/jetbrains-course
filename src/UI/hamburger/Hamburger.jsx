@@ -1,26 +1,26 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './hamburger.scss';
 
 function Hamburger(props) {
-    
-    const isBurger = props.isBurger
 
-    function handleClick() {
-        props.updateHam(!isBurger)
-    }
+	const isBurger = props.isBurger
 
-    return (
-        <div
-                className={ !isBurger ? 'hamburger' : 'hamburger active' }
-                onClick={handleClick}
-            >
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    )
+	function handleClick() {
+		props.updateHam(!isBurger)
+	}
+
+	return (
+		<div
+			className={!isBurger ? 'hamburger' : 'hamburger active'}
+			onClick={handleClick}
+		>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	)
 }
 
 export default Hamburger;
