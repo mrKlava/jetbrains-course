@@ -20,7 +20,9 @@ function CaseConverter() {
 		{
 			btn: 'proper-case',
 			click: () => {
-				let words = text.split(' ')
+				let trg = text.toLowerCase().replace(/\s{2,}/g, '').replace(/\.\s*/g, '. ').replace(/\s*\./g, '.')
+
+				let words = trg.split(' ')
 
 				for (let i = 0; i < words.length; i++) {
 					words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
@@ -34,7 +36,11 @@ function CaseConverter() {
 		{
 			btn: 'sentence-case',
 			click: () => {
-				let words = text.toLowerCase().split('.');
+				let trg = text.toLowerCase().replace(/\s{2,}/g, '').replace(/\.\s*/g, '. ').replace(/\s*\./g, '.')
+
+				let words = trg.toLowerCase().split('. ');
+
+				console.log(words)
 
 				for (let i = 0; i < words.length; i++) {
 					words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
@@ -54,10 +60,12 @@ function CaseConverter() {
 				if (fileName === null) {
 
 					return console.log('canceled');
+
 				} else if (fileName === '') {
 					alert('Please name the file');
 
 					return btns.click();
+
 				} else {
 					let element = document.createElement('a');
 					element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));

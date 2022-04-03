@@ -7,8 +7,10 @@ import { BookSvg, ClockSvg, StarSvg, ChallenchingSvg, EasySvg, HardSvg, MediumSv
 import './projects.scss';
 
 function Projects(props) {
-	const [isActive, setIsActive] = useState(false)
-	const [index, setIndex] = useState(5)
+	const [isActive, setIsActive] = useState(true) 			// SET TO FALSE
+	const [index, setIndex] = useState(0)								// SET TO 5
+
+
 	const cards = props.data.cards
 	const projectsArr = [<CaseConverter/>, <Flashcards/>, <VirtualPiano/>, <ToDoList/>, <OpenSpace/>, null]
 	const difficulty = [<EasySvg/>, <MediumSvg/>, <HardSvg/>, <ChallenchingSvg/>]
