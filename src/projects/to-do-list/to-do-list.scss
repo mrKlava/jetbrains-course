@@ -56,7 +56,7 @@
 			overflow: auto;
 			box-sizing: border-box;
 
-			height: 900px;
+			height: 800px;
 
 			padding-inline-start: 0;
 
@@ -66,10 +66,10 @@
 			@media (max-height: 900px) {
 				height: 400px;
 			}
-			@media (max-height: 700px) {
+			@media (max-height: 720px) {
 				height: 300px;
 			}
-			@media (max-height: 600px) {
+			@media (max-height: 610px) {
 				height: 200px;
 			}
 

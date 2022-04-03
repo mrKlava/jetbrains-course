@@ -5,7 +5,7 @@ import data from '../assets/data/data'
 import './to-do-list.scss'
 
 
-function ToDo(props) {
+function ToDo() {
 	const [currentList, setCurrentList] = useState([])
 	const [inputText, setInputText] = useState('')
 

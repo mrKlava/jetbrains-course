@@ -34,14 +34,25 @@
 
 			right: 1rem;
 			top: 1rem;
-
+			
 			z-index: 100;
+			
+			width: 1.3rem;
+			height: 1.3rem;
+			background: $violet;
+			color: $blanche;
+			border-radius: 50%;
 
-			&:hover {
-				cursor: pointer;
+			text-align: center;
+			
+			transition: background .2s linear;
+			
+				&:hover {
+					background: $violet-hover;
+					cursor: pointer;
+				}
 			}
 		}
-	}
 
 	&.active {
 		display: block;

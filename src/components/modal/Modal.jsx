@@ -13,7 +13,7 @@ function  Modal(props) {
     <div className={!active ? 'modal' : 'modal active'} >
         <div className="modal__window">
             <div className="modal__window-close" onClick={handleClose}>
-                X
+              X
             </div>
             {props.children}
         </div>

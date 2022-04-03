@@ -1,22 +1,20 @@
 import React, {useState} from 'react';
 
 import { Project, Modal } from '../../components';
-import { CaseConverter, Flashcards, OpenSpace, ToDoList, VirtualPiano } from '../../projects'
+import { CaseConverter, Flashcards, OpenSpace, Portfolio, ToDoList, VirtualPiano } from '../../projects'
 import { BookSvg, ClockSvg, StarSvg, ChallenchingSvg, EasySvg, HardSvg, MediumSvg } from '../../assets/images';
 
 import './projects.scss';
 
 function Projects(props) {
-	const [isActive, setIsActive] = useState(true) 			// SET TO FALSE
-	const [index, setIndex] = useState(3)								// SET TO 5
-
-
+	const [isActive, setIsActive] = useState(false)
+	const [index, setIndex] = useState(6)
 	const cards = props.data.cards
-	const projectsArr = [<CaseConverter/>, <Flashcards/>, <VirtualPiano/>, <ToDoList/>, <OpenSpace/>, null]
+	const projectsArr = [<CaseConverter/>, <Flashcards/>, <VirtualPiano/>, <ToDoList/>, <OpenSpace/>, <Portfolio/>, null]
 	const difficulty = [<EasySvg/>, <MediumSvg/>, <HardSvg/>, <ChallenchingSvg/>]
 
 	/* Handle SVG array */
-	function creatSvgArray(item, index) {
+	function creatSvgArray(item) {
 		const svgArr = [<StarSvg/>, difficulty[item.difficulty], <ClockSvg/>, <BookSvg/>]
 
 		return svgArr
@@ -33,7 +31,7 @@ function Projects(props) {
 	/* Close window */
 	function handleClose(e) {
 
-		setIndex(5)
+		setIndex(6)
 		setIsActive(false)
 	}
 
@@ -53,7 +51,7 @@ function Projects(props) {
 							key={index}
 							id={`pro-${index}`}
 							liftState={openModal}
-							svgArray={creatSvgArray(item, index)} />
+							svgArray={creatSvgArray(item)} />
 					})}
 
 				</div>

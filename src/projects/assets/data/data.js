@@ -58,12 +58,17 @@ const dataProjects = {
     {
         "title": "To-Do List"
     },
+    "portfolio": 
+    {
+        "title": "Portfolio",
+        "text": " All this webpage is basically \"Portfolio\" project for JetBrains \"Frontend Developer\" track, but remastered and implemented on React.js. This page is looking like page hyperskill.org with track \"Frontend developer\". Track was finished in february 2022, and remastered in march 2022. ",
+    },
     "openSpace": 
     {
         "title": "Open Space",
         "mars": mars,
         "rocket": rocket,
-    }
+    },
 }
 
 export default dataProjects
