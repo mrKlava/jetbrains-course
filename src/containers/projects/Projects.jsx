@@ -8,7 +8,7 @@ import './projects.scss';
 
 function Projects(props) {
 	const [isActive, setIsActive] = useState(true) 			// SET TO FALSE
-	const [index, setIndex] = useState(1)								// SET TO 5
+	const [index, setIndex] = useState(3)								// SET TO 5
 
 
 	const cards = props.data.cards

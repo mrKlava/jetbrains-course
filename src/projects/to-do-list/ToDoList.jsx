@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
-import './to-do-list.scss'
 import data from '../assets/data/data'
+
+import './to-do-list.scss'
 
 
 function ToDo(props) {
