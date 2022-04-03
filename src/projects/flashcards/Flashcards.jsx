@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 
-import './flashcards.scss'
-
 import data from '../assets/data/data'
 import { Btn } from '../../UI'
+
+import './flashcards.scss'
 
 function Flashcards() {
 

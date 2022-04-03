@@ -12,11 +12,11 @@ function CaseConverter() {
 		{
 			btn: 'upper-case',
 			click: () => setText(text.toUpperCase()),
-		},
+		},	// to UPEAR CASE
 		{
 			btn: 'lower-case',
 			click: () => setText(text.toLowerCase()),
-		},
+		},	// to lower case
 		{
 			btn: 'proper-case',
 			click: () => {
@@ -32,15 +32,13 @@ function CaseConverter() {
 
 				setText(proper)
 			},
-		},
+		},	// to Proper Case
 		{
 			btn: 'sentence-case',
 			click: () => {
 				let trg = text.toLowerCase().replace(/\s{2,}/g, '').replace(/\.\s*/g, '. ').replace(/\s*\./g, '.')
 
 				let words = trg.toLowerCase().split('. ');
-
-				console.log(words)
 
 				for (let i = 0; i < words.length; i++) {
 					words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
@@ -50,7 +48,7 @@ function CaseConverter() {
 
 				setText(sentence)
 			},
-		},
+		},	// to Sentence case
 		{
 			btn: 'save-text-file',
 			click: () => {
@@ -79,7 +77,7 @@ function CaseConverter() {
 					document.body.removeChild(element);
 				}
 			},
-		},
+		},	// save file.txt
 	]
 
 	return (
