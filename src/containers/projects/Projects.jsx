@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState} from 'react'
 
-import { Project, Modal } from '../../components';
+import { Project, Modal } from '../../components'
 import { CaseConverter, Flashcards, OpenSpace, Portfolio, ToDoList, VirtualPiano } from '../../projects'
-import { BookSvg, ClockSvg, StarSvg, ChallenchingSvg, EasySvg, HardSvg, MediumSvg } from '../../assets/images';
+import { BookSvg, ClockSvg, StarSvg, ChallenchingSvg, EasySvg, HardSvg, MediumSvg } from '../../assets/images'
 
-import './projects.scss';
+import './projects.scss'
 
 function Projects(props) {
 	const [isActive, setIsActive] = useState(false)
@@ -60,7 +60,7 @@ function Projects(props) {
 				{projectsArr[index]}
 			</Modal>
 		</div>
-	);
+	)
 }
 
 export default Projects;

@@ -4,7 +4,6 @@ import data from '../assets/data/data'
 
 import './portfolio.scss'
 
-
 function Portfolio() {
   return (
     <div className='portfolio'>

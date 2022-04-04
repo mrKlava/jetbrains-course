@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { ListItem } from '../../UI';
+import { ListItem } from '../../UI'
 
-import './list.scss';
+import './list.scss'
 
 function List(props) {
 	const arr = props.svgArray
@@ -18,7 +18,7 @@ function List(props) {
 				)
 			})}
 		</ul>
-	);
+	)
 }
 
 export default List;

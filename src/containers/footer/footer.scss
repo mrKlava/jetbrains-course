@@ -1,35 +1,36 @@
-@use '../../style/variables' as *;
+@use '../../style/variables'as *;
 
 .footer {
-    height: 3rem;
-    background-color: $bg-navbar;
+	height: 3rem;
+	background-color: $bg-navbar;
 
-    font-size: $text-lg;
-    color: $color-text-light;
+	font-size: $text-lg;
+	color: $color-text-light;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
-    @media (max-width: $screen-xs) {
-        font-size: $text-md
-    }
-    
-    &__content {
+	@media (max-width: $screen-xs) {
+		font-size: $text-md
+	}
 
-        &-text {
-            text-align: center;
-        }
-        &-link {
-            color: $color-navlink-hover;
-            text-decoration: none;
-            margin-left: .5rem;
+	&__content {
 
-            transition: color .1s linear;
+		&-text {
+			text-align: center;
+		}
 
-            &:hover {
-                color: $violet;
-            }
-        }
-    }
+		&-link {
+			color: $color-navlink-hover;
+			text-decoration: none;
+			margin-left: .5rem;
+
+			transition: color .1s linear;
+
+			&:hover {
+				color: $violet;
+			}
+		}
+	}
 }

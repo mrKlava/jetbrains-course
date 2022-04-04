@@ -1,100 +1,104 @@
-@use '../../style/variables' as *;
+@use '../../style/variables'as *;
 
 .header {
-    height: 100vh;
-    background-color: $noir;
-    background-image: url('../../assets/images/header.svg');
-    background-repeat: no-repeat;
-    background-position: 100% 0;
-    
-    color: $color-text-light;
-    
-    margin-bottom: 3rem;
-    padding: 5rem 0;
+	height: 100vh;
+	background-color: $noir;
+	background-image: url('../../assets/images/header.svg');
+	background-repeat: no-repeat;
+	background-position: 100% 0;
 
-    @media (max-width: $screen-xs) {
-        padding: 5rem 0; 
-        height: 100%;
-    }
-    
-    &__content {
-        max-width: 70%;
-        width: 100%;
-        
-        padding: 5rem 1rem;
-        margin-bottom: 3rem;
+	color: $color-text-light;
 
-        @media (max-width: $screen-sm) {
-            max-width: 100%;
-        
-            text-align: justify;
+	margin-bottom: 3rem;
+	padding: 5rem 0;
 
-            padding: 5rem 2rem;
-        }
-        
-        @media (max-width: $screen-xs) {
-            padding: 0 2rem;
-            margin-top: 2rem;;
-        }
-        
-        &-suptitle {
-            color: $color-suptitle-light;
-            font-size: $text-md;
-            margin-bottom: 1rem;
-        }
-        &-title {
-            color: $color-title-light;
-            font-size: $title-xl;
-            font-family: $font-bold;
-            text-align: start;
+	@media (max-width: $screen-xs) {
+		padding: 5rem 0;
+		height: 100%;
+	}
 
-            margin-bottom: 3rem;
+	&__content {
+		max-width: 70%;
+		width: 100%;
 
-            @media (max-width: $screen-xs) {
-                font-size: $title-md;
-                text-align: left;
+		padding: 5rem 1rem;
+		margin-bottom: 3rem;
 
-                margin-bottom: 1.5rem;
-            }
+		@media (max-width: $screen-sm) {
+			max-width: 100%;
 
-        }
-        &-info {
-            margin-bottom: 1rem;
+			text-align: justify;
 
-            .info-list {
-                &__item {
-                    color: $color-suptitle-light;
+			padding: 5rem 2rem;
+		}
 
-                    svg {
-                        margin-right: 4px;
-                    }
+		@media (max-width: $screen-xs) {
+			padding: 0 2rem;
+			margin-top: 2rem;
+			;
+		}
 
-                    &:first-child {
-                        color: $color-green;
-                    }
-                }
-            }
-        }
+		&-suptitle {
+			color: $color-suptitle-light;
+			font-size: $text-md;
+			margin-bottom: 1rem;
+		}
 
-        &-text {
-            font-family: $font-light;
-            color: $color-text-light;
-            font-size: $title-sm;
+		&-title {
+			color: $color-title-light;
+			font-size: $title-xl;
+			font-family: $font-bold;
+			text-align: start;
 
-            @media (max-width: $screen-xs) {
-                font-size: $text-md;
-                line-height: 2rem;
+			margin-bottom: 3rem;
 
-                margin-bottom: 1.5rem;
-            }
-        }
-        
-    }
-    .btn {
-        margin: 0 1rem;
+			@media (max-width: $screen-xs) {
+				font-size: $title-md;
+				text-align: left;
 
-        @media (max-width: $screen-sm) { 
-            margin: 0 2rem;
-        }
-    }
+				margin-bottom: 1.5rem;
+			}
+
+		}
+
+		&-info {
+			margin-bottom: 1rem;
+
+			.info-list {
+				&__item {
+					color: $color-suptitle-light;
+
+					svg {
+						margin-right: 4px;
+					}
+
+					&:first-child {
+						color: $color-green;
+					}
+				}
+			}
+		}
+
+		&-text {
+			font-family: $font-light;
+			color: $color-text-light;
+			font-size: $title-sm;
+
+			@media (max-width: $screen-xs) {
+				font-size: $text-md;
+				line-height: 2rem;
+
+				margin-bottom: 1.5rem;
+			}
+		}
+
+	}
+
+	.btn {
+		margin: 0 1rem;
+
+		@media (max-width: $screen-sm) {
+			margin: 0 2rem;
+		}
+	}
 }

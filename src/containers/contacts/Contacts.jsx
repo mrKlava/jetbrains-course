@@ -4,7 +4,6 @@ import { JetBrainsSvg } from '../../assets/images'
 
 import './contacts.scss'
 
-
 function Contacts(props) {
 	return (
 		<div className='contacts' id='contacts'>
@@ -23,7 +22,7 @@ function Contacts(props) {
 				</div>
 			</div>
 		</div>
-	);
+	)
 }
 
 export default Contacts;

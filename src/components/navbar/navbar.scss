@@ -1,106 +1,104 @@
-@use '../../style/variables' as *;
+@use '../../style/variables'as *;
 
 .navbar {
-    background-color: $bg-navbar;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.404);
+	background-color: $bg-navbar;
+	box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.404);
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 
-    z-index: 10;
-    
-    &-inner {
-        position: relative;
+	z-index: 10;
 
-        height: 3rem;
-        padding: 0 1rem;
+	&-inner {
+		position: relative;
 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+		height: 3rem;
+		padding: 0 1rem;
 
-        @media (max-width: $screen-sm) {
-        padding: 0 2rem;
-            
-        }
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
 
-        &__logo {
-            a {
-                img {
+		@media (max-width: $screen-sm) {
+			padding: 0 2rem;
 
-                }
-            }
-        }
-        
-        &__nav {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+		}
 
-            .navbar-links {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+		&__logo {
+			a {
+				img {}
+			}
+		}
 
-                &__link {
-                    a {
-                        font-size: $text-lg;
-                    }
+		&__nav {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
 
-                }
-            }
+			.navbar-links {
+				display: flex;
+				justify-content: center;
+				align-items: center;
 
-            @media (max-width: $screen-sm-min) {
-                display: none;
-            }
+				&__link {
+					a {
+						font-size: $text-lg;
+					}
 
-            &-mob {
-                @media (max-width: $screen-sm-min) {
-                    display: block;
-                }
+				}
+			}
 
-                display: none;
-                background-color: $bg-navbar;
+			@media (max-width: $screen-sm-min) {
+				display: none;
+			}
 
-                position: fixed;
-                top: 3rem;
-                right: -195px;
-                z-index: 1;
+			&-mob {
+				@media (max-width: $screen-sm-min) {
+					display: block;
+				}
 
-                transition: right .3s ease;
+				display: none;
+				background-color: $bg-navbar;
 
-                &.active {
-                    right: 1px;
-                }
+				position: fixed;
+				top: 3rem;
+				right: -195px;
+				z-index: 1;
 
-                .navbar-links {
-                    &__link {
-                        margin: 0;
-                        padding: 0.5rem 2rem;
+				transition: right .3s ease;
 
-                        border-bottom: solid 1px $blanche;
+				&.active {
+					right: 1px;
+				}
 
-                        &:first-child {
-                            padding-top: 1rem;
+				.navbar-links {
+					&__link {
+						margin: 0;
+						padding: 0.5rem 2rem;
 
-                            border-top: solid 1px $blanche;
-                        }
+						border-bottom: solid 1px $blanche;
 
-                        &:last-child {
-                            padding-bottom: 1rem;
+						&:first-child {
+							padding-top: 1rem;
 
-                            border-bottom: none;
-                        }
+							border-top: solid 1px $blanche;
+						}
 
-                        a {
-                            font-size: $title-md;
-                        }
-                    }
-                }
-            }
-        }
-    }
+						&:last-child {
+							padding-bottom: 1rem;
+
+							border-bottom: none;
+						}
+
+						a {
+							font-size: $title-md;
+						}
+					}
+				}
+			}
+		}
+	}
 }

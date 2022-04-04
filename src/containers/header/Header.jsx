@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { List } from '../../components';
+import { List } from '../../components'
 import { Btn } from '../../UI';
 import { PeopleSvg, ProjectSvg, ClockSvg, BookSvg } from '../../assets/images';
 

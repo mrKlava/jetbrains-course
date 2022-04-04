@@ -1,10 +1,8 @@
 import { Header, About, Projects, Contacts, Footer} from './containers';
-
 import data from './assets/data/data.json'
-
+import { Navbar } from './components';
 
 import './App.scss'
-import { Navbar } from './components';
 
 function App() {
   return (

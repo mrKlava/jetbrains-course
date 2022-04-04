@@ -1,92 +1,98 @@
-@use '../../style/variables' as *;
+@use '../../style/variables'as *;
 
 .about {
-    margin: 3rem auto;
-    padding: 5rem 1rem;
+	margin: 3rem auto;
+	padding: 5rem 1rem;
 
-    @media (max-width: $screen-sm) {
-        padding: 3rem 2rem 0;
-    }
+	@media (max-width: $screen-sm) {
+		padding: 3rem 2rem 0;
+	}
 
-    &__title {
-        font-family: $font-bold;
-        font-size: $title-lg;
-        
-        margin-bottom: 1.5rem;
+	&__title {
+		font-family: $font-bold;
+		font-size: $title-lg;
 
-        @media (max-width: $screen-xs) {
-            font-size: $title-md;
-            margin-bottom: .5rem;
-        }
+		margin-bottom: 1.5rem;
 
-    }
-    &__subtitle {
-        font-size: $title-sm;
+		@media (max-width: $screen-xs) {
+			font-size: $title-md;
+			margin-bottom: .5rem;
+		}
 
-        margin-bottom: 1.5rem;
+	}
 
-        @media (max-width: $screen-xs) {
-            font-size: $text-lg;
-        }
-    }
-    &__content {
-        display: flex;
+	&__subtitle {
+		font-size: $title-sm;
 
-        @media (max-width: $screen-xs) {
-            flex-direction: column-reverse;
-        }
+		margin-bottom: 1.5rem;
 
-        &-item {
-            &__bold {
-                font-family: $font-bold;
+		@media (max-width: $screen-xs) {
+			font-size: $text-lg;
+		}
+	}
 
-                margin: 1rem 0;
-            }
-            &__list {
-                .info-list {
-                    flex-direction: column;
+	&__content {
+		display: flex;
 
-                    &__item {
-                        margin-bottom: 1rem;
-                        
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-            }
-            &__image {
-                margin-bottom: 1.5rem;
+		@media (max-width: $screen-xs) {
+			flex-direction: column-reverse;
+		}
 
-            }
-            &.card {
-                width: 75%;
+		&-item {
+			&__bold {
+				font-family: $font-bold;
 
-                background-color: $bg-card;
-                padding: 1.3rem;
-                border-radius: .5rem;
-                box-shadow: 0 0.25rem 0.75rem rgb(30 74 126 / 15%);
+				margin: 1rem 0;
+			}
 
-                @media (max-width: $screen-xs) {
-                    width: 100%;
-                }
-            }
-            &.education {
-                width: 35%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+			&__list {
+				.info-list {
+					flex-direction: column;
 
-                text-align: center;
+					&__item {
+						margin-bottom: 1rem;
 
-                margin-left: 2rem;
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
 
-                @media (max-width: $screen-xs) {
-                    width: 100%;
-                    margin: 0 0 1rem;
-                }
-            }
-        }
-    }
+			&__image {
+				margin-bottom: 1.5rem;
+
+			}
+
+			&.card {
+				width: 75%;
+
+				background-color: $bg-card;
+				padding: 1.3rem;
+				border-radius: .5rem;
+				box-shadow: 0 0.25rem 0.75rem rgb(30 74 126 / 15%);
+
+				@media (max-width: $screen-xs) {
+					width: 100%;
+				}
+			}
+
+			&.education {
+				width: 35%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				text-align: center;
+
+				margin-left: 2rem;
+
+				@media (max-width: $screen-xs) {
+					width: 100%;
+					margin: 0 0 1rem;
+				}
+			}
+		}
+	}
 }

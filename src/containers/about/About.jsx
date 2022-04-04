@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 import { List } from '../../components'
 import { ChallenchingSvg, EasySvg, EducationSvg, HardSvg, MediumSvg } from '../../assets/images'
 
-import './about.scss';
+import './about.scss'
 
 function About(props) {
 	const arr = [<EasySvg/>, <MediumSvg/>, <HardSvg/>, <ChallenchingSvg/>]
@@ -28,7 +28,7 @@ function About(props) {
 				</div>
 			</div>
 		</div>
-	</div>;
+	</div>
 }
 
 export default About;

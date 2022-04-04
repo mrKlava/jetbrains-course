@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import './navbar-links.scss';
+import { NavLink } from '..'
 
-import { NavLink } from '..';
+import './navbar-links.scss'
 
 function NavbarLinks(props) {
 	return (

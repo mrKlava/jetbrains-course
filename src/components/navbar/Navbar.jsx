@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 
-import './navbar.scss';
-
 import { NavbarLinks, Hamburger } from '../../UI';
+
+import './navbar.scss';
 
 function Navbar(props) {
 	const [toggleMobMenu, setToggleMobMenu] = useState(false)
@@ -28,8 +28,7 @@ function Navbar(props) {
 
 					<Hamburger 
 						updateHam={handleHam} 
-						isBurger={toggleMobMenu}
-						/>
+						isBurger={toggleMobMenu} />
 
 				</div>
 			</div>

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import './nav-link.scss';
+import './nav-link.scss'
 
 function NavLink(props) {
 

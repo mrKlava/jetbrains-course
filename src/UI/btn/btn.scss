@@ -1,39 +1,39 @@
-@use '../../style/variables' as *;
+@use '../../style/variables'as *;
 
 .btn {
-    cursor: pointer;
-    
-    background-color: $bg-btn;
+	cursor: pointer;
 
-    color: $color-btn;
-    font-size: $text-lg;
-    font-family: $font-regular;
+	background-color: $bg-btn;
 
-    border: none;
-    outline: 0;
-    border-radius: .3rem;
-    padding: .5rem 1rem;
+	color: $color-btn;
+	font-size: $text-lg;
+	font-family: $font-regular;
 
-    transition: background-color .1s linear;
+	border: none;
+	outline: 0;
+	border-radius: .3rem;
+	padding: .5rem 1rem;
 
-    &:hover {
-        background-color: $bg-btn-hover;
-    }
+	transition: background-color .1s linear;
 
-    &:focus,
-    &:active {
-        outline: none;
-    }
+	&:hover {
+		background-color: $bg-btn-hover;
+	}
 
-    span {
-        font-size: $text-md;
-    }
+	&:focus,
+	&:active {
+		outline: none;
+	}
 
-    @media (max-width: $screen-xs) {
-        font-size: $text-md;
+	span {
+		font-size: $text-md;
+	}
 
-        span {
-            font-size: $text-sm;
-        }
-    }
+	@media (max-width: $screen-xs) {
+		font-size: $text-md;
+
+		span {
+			font-size: $text-sm;
+		}
+	}
 }

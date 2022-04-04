@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import './footer.scss';
+import './footer.scss'
 
 function Footer(props) {
   return (
@@ -17,4 +17,4 @@ function Footer(props) {
   )
 }
 
-export default Footer;
+export default Footer

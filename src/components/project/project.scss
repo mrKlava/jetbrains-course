@@ -1,38 +1,41 @@
-@use '../../style/variables' as *;
+@use '../../style/variables'as *;
 
 .projects__cards {
-    &-card {
-      display: block;
-      position: relative;
+  &-card {
+    display: block;
+    position: relative;
 
-      .card {
-        &__front,
-        &__back {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-  
-            backface-visibility: hidden;
-            transition: transform 0.5s linear 0s;
-        }
-  
-        &__front {
-            transform: perspective(600px) rotateY(0deg);
-        }
-        &__back {
-            transform: perspective(600px) rotateY(180deg);
-        }
+    .card {
+
+      &__front,
+      &__back {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        backface-visibility: hidden;
+        transition: transform 0.5s linear 0s;
       }
-      &:hover .card__back {
-            transform: perspective(600px) rotateY(0deg);
-            z-index: 3;
+
+      &__front {
+        transform: perspective(600px) rotateY(0deg);
       }
-      &:hover .card__front {
-            transform: perspective(600px) rotateY(-180deg);
-            z-index: 3;
+
+      &__back {
+        transform: perspective(600px) rotateY(180deg);
       }
     }
-}
 
+    &:hover .card__back {
+      transform: perspective(600px) rotateY(0deg);
+      z-index: 3;
+    }
+
+    &:hover .card__front {
+      transform: perspective(600px) rotateY(-180deg);
+      z-index: 3;
+    }
+  }
+}
