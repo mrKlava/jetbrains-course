@@ -31,26 +31,26 @@ This is final project which should summarize what you have learned during this c
 ```
 ## Structure
 ### File structure
-All JSX file are going with pares on SCSS filles in same folder.
+All JSX file are going on pares with SCSS filles in same folder.
 ```
 src
 	assets
 		data				// data.json for page text content
 		fonts				// fonts used on 
-		images			    // all svg images for page
-	components		        // medium reusable components 
+		images			    	// all svg images for page
+	components		        	// medium reusable components 
 		list
 		modal
 		navbar
 		project
-	containers			    // big bilding components
+	containers			   	// big bilding components
 		about
 		contacts
 		footer
 		header
 		projects
-	projects			    // all projects
-		assets			    // assets for projects
+	projects			    	// all projects
+		assets			    	// assets for projects
 			audio
 			data
 			images
@@ -60,7 +60,7 @@ src
 		portfolio
 		to-do-list
 		virtual-piano
-	UI						// small reusable components
+	UI					// small reusable components
 		btn
 		hamburger
 		list-item
